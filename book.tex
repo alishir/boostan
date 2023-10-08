@@ -1,0 +1,36 @@
+\documentclass{book}
+
+\usepackage{multicol}
+\usepackage{import}
+\usepackage{xepersian}
+\settextfont[Scale=1.3]{Noto Naskh Arabic}
+% \settextfont{IRBadr}
+
+\setlatintextfont{Noto Sans}
+
+\begin{document}
+
+\frontmatter
+\import{./}{title.tex}
+
+\clearpage
+\thispagestyle{empty}
+
+\tableofcontents
+
+\mainmatter
+
+\renewcommand{\baselinestretch}{1.75}\normalsize
+
+\chapter*{پیشگفتار}
+\addcontentsline{toc}{chapter}{پیشگفتار}
+\import{sections/}{section0-0.tex}
+
+% \chapter{مبحث افعال}
+% \import{sections/}{section1-0.tex}
+% \import{sections/}{section1-1.tex}
+
+% \chapter{ابواب ثلاثی مزید و ابنیه آن‌ها}
+
+
+\end{document}
