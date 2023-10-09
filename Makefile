@@ -1,10 +1,11 @@
 all: book.pdf
 
-%.pdf: %.tex 
-	xelatex $<
+SECTIONS := $(shell find ./sections -name "*.tex")
+
+book.pdf: book.tex title.tex $(SECTIONS)
 #	bibtex  article.aux
-#	xelatex article.tex
-#	xelatex book.tex
+	xelatex book.tex
+	xelatex book.tex
 
 clean:
 	-rm book.pdf
